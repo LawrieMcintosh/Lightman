@@ -9,14 +9,23 @@
 #include "Arduino.h"
 #include "Tlc5940.h"
 
+
+
 class Lightman
 {
   public:
 	Lightman();  
-    void set_light(); //int pin
-    void set_curve(); //int light_no, int R, int G, int B
+    void set_light(int light_no, int R, int G, int B); //int pin
+    void set_curve(int light_no, int start[], int end[], int cy, int curve, int curve_parameter); //
+    void display_all();
+    void cycle();
+      
+	
   private:
 	
+ //   void led2light()
+ //   void light2led()
+    void pMessage(String msg);	
 		
 };
 
